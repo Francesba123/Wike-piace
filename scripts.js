@@ -1,3 +1,24 @@
+// Inicializando o editor Quill
+var quill = new Quill('#editor-container', {
+    theme: 'snow',
+    modules: {
+        toolbar: [
+            [{ 'header': [1, 2, false] }],
+            ['bold', 'italic', 'underline'],
+            ['link'],
+            [{ 'list': 'ordered'}, { 'list': 'bullet' }],
+            [{ 'script': 'sub'}, { 'script': 'super' }],
+            [{ 'indent': '-1'}, { 'indent': '+1' }],
+            [{ 'direction': 'rtl' }],
+            [{ 'size': ['small', false, 'large', 'huge'] }],
+            [{ 'color': [] }, { 'background': [] }],
+            [{ 'font': [] }],
+            [{ 'align': [] }],
+            ['clean']
+        ]
+    }
+});
+
 // Simulação de postagem de artigo
 document.getElementById('publicar-form').addEventListener('submit', function(event) {
     event.preventDefault();
@@ -5,7 +26,7 @@ document.getElementById('publicar-form').addEventListener('submit', function(eve
     const titulo = document.getElementById('titulo').value;
     const categoria = document.getElementById('categoria').value;
     const tags = document.getElementById('tags').value;
-    const conteudo = document.getElementById('conteudo').value;
+    const conteudo = quill.root.innerHTML; // Obtendo o conteúdo do editor
 
     // Aqui você adicionaria a lógica para enviar os dados para o servidor
     console.log('Título:', titulo);
