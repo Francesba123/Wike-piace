@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Artigos Publicados - Meu WikiBlog</title>
+    <title>Artigos - Meu WikiBlog</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -20,20 +19,28 @@
         </nav>
     </header>
 
-    <main>
+    <aside class="sidebar">
+        <h2>Navegação</h2>
+        <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="artigos.html">Artigos</a></li>
+            <li><a href="publicacao.html">Publicar Artigo</a></li>
+            <li><a href="perfil.html">Meu Perfil</a></li>
+        </ul>
+    </aside>
+
+    <main class="main-content">
         <section id="artigos">
-            <h2>Artigos Publicados</h2>
+            <h2>Artigos Recentes</h2>
+            <!-- Lista de artigos -->
             <article>
                 <h3><a href="artigo-individual.html">Título do Artigo 1</a></h3>
                 <p>Resumo do artigo 1...</p>
             </article>
-
             <article>
                 <h3><a href="artigo-individual.html">Título do Artigo 2</a></h3>
                 <p>Resumo do artigo 2...</p>
             </article>
-
-            <!-- Outros artigos -->
         </section>
     </main>
 
