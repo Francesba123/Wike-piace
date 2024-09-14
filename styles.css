@@ -191,3 +191,55 @@ footer {
     bottom: 0;
     width: 100%;
 }
+/* Menu lateral */
+.sidebar {
+    width: 250px;
+    position: fixed;
+    top: 60px;
+    left: 0;
+    background-color: #fff;
+    padding: 20px;
+    height: 100%;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar h2 {
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar ul li {
+    margin-bottom: 10px;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+}
+
+.sidebar ul li a:hover {
+    color: #f0a500;
+}
+
+/* Conteúdo principal */
+.main-content {
+    margin-left: 270px;
+    padding: 20px;
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+
+    .main-content {
+        margin-left: 0;
+    }
+}
