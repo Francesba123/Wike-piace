@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Publicar Artigo - Wiki-Peace</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -21,31 +22,21 @@
         </nav>
     </header>
 
-    <aside class="sidebar">
-        <h2>Navegação</h2>
-        <ul>
-            <li><a href="index.html">Início</a></li>
-            <li><a href="artigos.html">Artigos</a></li>
-            <li><a href="publicacao.html">Publicar Artigo</a></li>
-            <li><a href="perfil.html">Meu Perfil</a></li>
-        </ul>
-    </aside>
-
     <main class="main-content">
-        <section id="publicar">
-            <h2>Publicar um Novo Artigo</h2>
+        <section id="publicacao">
+            <h2>Publicar Artigo</h2>
             <form id="publicar-form">
-                <label for="titulo">Título do Artigo:</label>
+                <label for="titulo">Título:</label>
                 <input type="text" id="titulo" name="titulo" required>
 
                 <label for="categoria">Categoria:</label>
                 <input type="text" id="categoria" name="categoria" required>
 
-                <label for="tags">Tags (separadas por vírgula):</label>
+                <label for="tags">Tags:</label>
                 <input type="text" id="tags" name="tags">
 
                 <label for="conteudo">Conteúdo:</label>
-                <textarea id="conteudo" name="conteudo" rows="10" required></textarea>
+                <div id="editor-container"></div>
 
                 <button type="submit">Publicar</button>
             </form>
@@ -56,6 +47,7 @@
         <p>&copy; 2024 Wiki-Peace. Todos os direitos reservados.</p>
     </footer>
 
+    <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
     <script src="scripts.js"></script>
 </body>
 </html>
