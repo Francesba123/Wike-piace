@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Título do Artigo - Meu WikiBlog</title>
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -20,10 +19,40 @@
         </nav>
     </header>
 
-    <main>
+    <aside class="sidebar">
+        <h2>Navegação</h2>
+        <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="artigos.html">Artigos</a></li>
+            <li><a href="publicacao.html">Publicar Artigo</a></li>
+            <li><a href="perfil.html">Meu Perfil</a></li>
+        </ul>
+    </aside>
+
+    <main class="main-content">
         <section id="artigo">
             <h2>Título do Artigo</h2>
-            <p>Este é o conteúdo completo do artigo. Adicione o texto completo aqui.</p>
+            <p><strong>Categoria:</strong> Categoria do Artigo</p>
+            <p><strong>Tags:</strong> Tag1, Tag2</p>
+            <div id="artigo-conteudo">
+                <p>Conteúdo do artigo...</p>
+            </div>
+
+            <section id="comentarios">
+                <h3>Comentários</h3>
+                <div id="comentarios-container">
+                    <!-- Comentários serão adicionados aqui -->
+                </div>
+                <form id="comentario-form">
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome" required>
+
+                    <label for="comentario">Comentário:</label>
+                    <textarea id="comentario" name="comentario" rows="4" required></textarea>
+
+                    <button type="submit">Enviar Comentário</button>
+                </form>
+            </section>
         </section>
     </main>
 
