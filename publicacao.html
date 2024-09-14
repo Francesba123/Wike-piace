@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Publicar Artigo - Meu WikiBlog</title>
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -20,12 +19,28 @@
         </nav>
     </header>
 
-    <main>
+    <aside class="sidebar">
+        <h2>Navegação</h2>
+        <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="artigos.html">Artigos</a></li>
+            <li><a href="publicacao.html">Publicar Artigo</a></li>
+            <li><a href="perfil.html">Meu Perfil</a></li>
+        </ul>
+    </aside>
+
+    <main class="main-content">
         <section id="publicar">
-            <h2>Publicar Novo Artigo</h2>
+            <h2>Publicar um Novo Artigo</h2>
             <form id="publicar-form">
                 <label for="titulo">Título do Artigo:</label>
                 <input type="text" id="titulo" name="titulo" required>
+
+                <label for="categoria">Categoria:</label>
+                <input type="text" id="categoria" name="categoria" required>
+
+                <label for="tags">Tags (separadas por vírgula):</label>
+                <input type="text" id="tags" name="tags">
 
                 <label for="conteudo">Conteúdo:</label>
                 <textarea id="conteudo" name="conteudo" rows="10" required></textarea>
